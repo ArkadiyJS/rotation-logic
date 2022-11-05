@@ -1,14 +1,10 @@
 .App {
   display: grid;
   max-width: 1200px;
-
   margin: 0 auto;
   justify-content: center;
   align-content: center;
   grid-template-rows: 200px 100px 1fr;
-
-
-
 }
 
 h1 {
@@ -25,12 +21,7 @@ input {
   border-radius: 6px;
 }
 
-
-
-
-
 ul {
-
   list-style-type: none;
   cursor: pointer;
   padding-top: 10px;
@@ -56,5 +47,3 @@ li {
   transition: 0.3s all linear;
 
 }
-
-/* #F95738; */

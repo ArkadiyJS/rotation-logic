@@ -19,7 +19,7 @@ const App = () => {
       <Search />
 
       <>
-        {items.map((i) => <List id={i.id} name={i.name} quantity={i.quantity} data={i.data} />)}
+        {items.map((i) => <List key={i.name} id={i.id} name={i.name} quantity={i.quantity} data={i.data} />)}
       </>
 
     </div>
