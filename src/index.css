@@ -5,4 +5,5 @@ body {
 
 h1, div, text, body, input {
   color: #ffffff;
+  font: 400 16px 'Fredoka', sans-serif;
 }

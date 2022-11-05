@@ -25,8 +25,8 @@ input {
   border-radius: 6px;
 }
 
-input:active {
-  border: #F95738;
+input:focus:active {
+  border-color: #F95738;
 
 }
 
