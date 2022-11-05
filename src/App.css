@@ -1,7 +1,7 @@
 .App {
   display: grid;
   max-width: 1200px;
-  height: 100vh;
+  
   margin: 0 auto;
   justify-content: center;
   align-content: center;
@@ -29,5 +29,9 @@ input:focus:active {
   border-color: #F95738;
 
 }
-
+li{padding-top: 5px;
+  list-style-type: none;}
+ul{list-style-type: none;
+  cursor: pointer;
+padding-top: 10px;}
 /* #F95738; */

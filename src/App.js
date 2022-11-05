@@ -17,7 +17,11 @@ const App = () => {
     <div className="App">
       <h1> Ez Rotation</h1>
       <Search />
-      <List />
+
+      <ul>
+        {items.map((i)=><List id={i.id} name={i.name} quantity={i.quantity}  data={i.data}/>)}
+      </ul>
+      
     </div>
   );
 }

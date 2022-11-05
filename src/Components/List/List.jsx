@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function List(props) {
+const List = (props) => {
+
+
+
+  const [showInfo,setShowInfo] = useState(false)
+  const openInfo = ()=>{setShowInfo(!showInfo)}
   return (
-    <>
-      <ul>name item
-        {/* {.map} */}
-      </ul>
-    </>
+    <li>
+      <ul onClick={()=>{openInfo()}}>
+      {props.name}
+
+      {showInfo ? <>
+      <li>Номер: {props.id}</li>
+      <li>Дата: {props.data}</li>
+      <li>Количество: {props.quantity}</li>
+      </>  : '' }
+      
+      
+        </ul>
+      
+    </li>
   );
 }
 
