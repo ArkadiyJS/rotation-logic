@@ -18,10 +18,10 @@ const App = () => {
       <h1> Ez Rotation</h1>
       <Search />
 
-      <ul>
-        {items.map((i)=><List id={i.id} name={i.name} quantity={i.quantity}  data={i.data}/>)}
-      </ul>
-      
+      <>
+        {items.map((i) => <List id={i.id} name={i.name} quantity={i.quantity} data={i.data} />)}
+      </>
+
     </div>
   );
 }
