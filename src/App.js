@@ -8,6 +8,10 @@ const App = () => {
   const [items, setItems] = useState([])
   const [searchValue, setSearchValue] = useState('')
 
+  const changeInput = (e) =>{
+    setSearchValue(e.target.value)
+  }
+
   useEffect(() => {
     axios.get('https://636626dc79b0914b75ca7a73.mockapi.io/data').then((res) => { setItems(res.data) })
   }, [])
@@ -17,7 +21,8 @@ const App = () => {
   return (
     <div className="App">
       <h1> Ez Rotation</h1>
-      <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+
+      <Search searchValue={searchValue} changeInput={changeInput} />
 
       <>
         {items.map((i) => <List key={i.name} id={i.id} name={i.name} quantity={i.quantity} data={i.data} />)}

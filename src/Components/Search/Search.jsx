@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Search(props) {
+const Search=(props)=> {
   return (
     <>
       <input
@@ -8,7 +8,7 @@ function Search(props) {
         placeholder='Найти товар...'
         type='text'
         value={props.searchValue}
-        onChange={(e) => { props.setSearchValue(e) }}
+        onChange={(e) => { props.changeInput(e) }}
 
 
       />
