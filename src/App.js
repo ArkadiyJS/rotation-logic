@@ -6,17 +6,18 @@ import { useEffect, useState } from 'react';
 
 const App = () => {
   const [items, setItems] = useState([])
+  const [searchValue, setSearchValue] = useState('')
 
   useEffect(() => {
     axios.get('https://636626dc79b0914b75ca7a73.mockapi.io/data').then((res) => { setItems(res.data) })
   }, [])
 
-  console.log(items)
+
 
   return (
     <div className="App">
       <h1> Ez Rotation</h1>
-      <Search />
+      <Search searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <>
         {items.map((i) => <List key={i.name} id={i.id} name={i.name} quantity={i.quantity} data={i.data} />)}
