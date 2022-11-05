@@ -5,7 +5,7 @@ import Search from './Components/Search/Search';
 const App = () => {
   return (
     <div className="App">
-      <h1> Ez ROTATION</h1>
+      <h1> Ez Rotation</h1>
       <Search />
       <List />
     </div>
