@@ -25,7 +25,12 @@ const App = () => {
       <Search searchValue={searchValue} changeInput={changeInput} />
 
       <>
-        {items.map((i) => <List key={i.name} id={i.id} name={i.name} quantity={i.quantity} data={i.data} />)}
+        {items.filter(obj => { 
+          if (obj.name.toLowerCase().includes(searchValue.toLowerCase())) {
+            return true
+          } else {return false}
+        })
+        .map((i) => <List key={i.name} id={i.id} name={i.name} quantity={i.quantity} data={i.data} />)}
       </>
 
     </div>
