@@ -8,7 +8,7 @@ const App = () => {
   const [items, setItems] = useState([])
   const [searchValue, setSearchValue] = useState('')
 
-  const changeInput = (e) =>{
+  const changeInput = (e) => {
     setSearchValue(e.target.value)
   }
 
@@ -25,12 +25,12 @@ const App = () => {
       <Search searchValue={searchValue} changeInput={changeInput} />
 
       <>
-        {items.filter(obj => { 
+        {items.filter(obj => {
           if (obj.name.toLowerCase().includes(searchValue.toLowerCase())) {
             return true
-          } else {return false}
+          } else { return false }
         })
-        .map((i) => <List key={i.name} id={i.id} name={i.name} quantity={i.quantity} data={i.data} />)}
+          .map((i) => <List key={i.name} id={i.id} name={i.name} quantity={i.quantity} data={i.data} />)}
       </>
 
     </div>
