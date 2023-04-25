@@ -8,7 +8,7 @@ const List = (props) => {
   const openInfo = () => { setShowInfo(!showInfo) }
   return (
     <>
-      <ul className='nameList' ><p onClick={() => { openInfo() }}>{props.name}</p>
+      <ul className='nameList' onClick={() => { openInfo() }} ><p >{props.name}</p>
 
 
         {showInfo ? <>
